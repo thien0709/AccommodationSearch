@@ -143,5 +143,3 @@ AccommodationSearch-FE/
 | POST        | /api/users/register/               | Đăng ký người dùng mới              |
 | GET         | /o/authorize/                      | Yêu cầu xác thực OAuth2            |
 | POST        | /o/token/                          | Lấy access token OAuth2            |
-
-p
