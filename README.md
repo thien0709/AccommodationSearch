@@ -2,144 +2,174 @@
 
 # Accommodation Search System
 
-Hệ thống tìm kiếm chỗ ở mạnh mẽ, hiện đại, tích hợp backend & frontend, mang lại trải nghiệm tối ưu cho người dùng!
+A modern and reliable accommodation search platform designed specifically to help students easily find and manage affordable boarding houses, apartments, and other lodging options near their schools. By integrating backend and frontend technologies seamlessly, the system provides a smooth, efficient, and user-friendly experience tailored to the unique needs of students looking for convenient and budget-friendly places to stay.
+
 
 ---
 
-## 📖 Giới Thiệu
+## 🌟 Feature
 
-Accommodation Search là nền tảng hỗ trợ người dùng tìm kiếm, quản lý và tương tác với các danh sách chỗ ở (nhà trọ, căn hộ, khách sạn, v.v.). Hệ thống này gồm hai phần:
+### 🔍 Advanced Search  
+- Find accommodations by location, price range, amenities, and type
 
-- **Backend:** Xây dựng với Python/Django, cung cấp API RESTful, xử lý dữ liệu, xác thực OAuth2, quản lý người dùng và chỗ ở.
-- **Frontend:** Phát triển bằng ReactJS, cung cấp giao diện thân thiện, trực quan, dễ sử dụng, kết nối trực tiếp với backend qua API.
+### 👤 User Management  
+- User registration and login with secure token authentication  
+- Manage personal profiles and update passwords
 
-Mục tiêu dự án là tạo ra hệ thống đáng tin cậy, dễ bảo trì, dễ mở rộng, mang lại trải nghiệm tuyệt vời cho người dùng cuối.
-
----
-
-## 🌟 Tính Năng Chính
-
-### 🔍 Tìm Kiếm Chỗ Ở  
-- Tìm kiếm theo vị trí, giá, tiện ích, loại chỗ ở
-- Lọc nâng cao, sắp xếp kết quả
-
-### 👤 Quản Lý Người Dùng  
-- Đăng ký, đăng nhập, xác thực qua token  
-- Quản lý thông tin cá nhân, đổi mật khẩu
-
-### 🏡 Quản Lý Dữ Liệu Chỗ Ở  
-- Thêm, sửa, xóa và xem chi tiết chỗ ở  
-- Quản lý hình ảnh, tiện ích, trạng thái
-
-### 🌐 API RESTful  
-- Kết nối frontend và ứng dụng bên thứ ba  
-- Endpoint tiêu chuẩn, bảo mật cao
-
-### ⚡ Hiệu Suất Cao  
-- Tối ưu hóa truy vấn, phản hồi nhanh
-
-### 🖥 Giao Diện Người Dùng (Frontend)
-- Giao diện React Native thân thiện người dùng   
-- Responsive, hỗ trợ cả mobile và desktop  
-- Đăng nhập, đăng ký, tìm kiếm, xem/đặt chỗ ở  
-- Quản lý danh sách yêu thích, lịch sử giao dịch
+### 🏡 Accommodation Management  
+- Add, edit, and delete accommodation listings  
+- Upload and manage images and amenities  
+- Track availability status of listings  
+- View accommodation locations integrated with Google Maps
 
 ---
 
-## 🛠 Công Nghệ Sử Dụng
+## 🛠 Tech Stack
 
-**Backend**
-- Python 3.9+
+***Backend***
+- Python
 - Django
-- MySQL 8.x+
-- OAuth2 (django-oauth-toolkit)
+- MySQL
+- Cloudinary
+- OAuth2.0
 
-**Frontend**
-- React Native
-- Redux Toolkit
-- Axios (gọi API)
-- React Navigation
+***Frontend***
+- React Native  
+- Firebase  
+- React Native Dotenv  
+- React Native Elements  
+- Lodash  
 
-**Công Cụ Khác**
+***Other***
 - pip, Django ORM, Git
 
 ---
 
-## ⚙ Hướng Dẫn Cài Đặt
+## ⚙ Installation 
 
 ### 1️⃣ Backend
 
 ```bash
 git clone https://github.com/thien0709/AccommodationSearch.git
 cd Accommodation-search-system-BE
+```
+***Config environment***
+```bash
 python -m venv venv
+```
+```bash
 source venv/bin/activate   # Linux/Mac
+```
+```bash
 venv\Scripts\activate      # Windows
+```
+```bash 
 pip install -r requirements.txt
-# Tạo database accommodation_db trong MySQL
+```
+***Create a MySQL database named `accommodation_db`***
+
+```bash
 python manage.py migrate
 python manage.py runserver
 ```
+--- 
 
 ### 2️⃣ Frontend
 
 ```bash
 git clone https://github.com/thien0709/AccommodationSearch.git
 cd Accommodation_Search_System_FE
+```
+```bash
 npm install
 npm start
 ```
 
 ---
 
-## 📂 Cấu Trúc Thư Mục
+## 📂 Structure
 
 **Backend**
 ```
-AccommodationSearch/
-├── accommodation_app/
-│   ├── migrations/
-│   ├── templates/
-│   ├── admin.py
-│   ├── models.py
-│   ├── serializers.py
-│   ├── urls.py
-│   ├── views.py
-│   └── ...
-├── accommodation_system/
-│   ├── settings.py
-│   ├── urls.py
-│   └── ...
-├── manage.py
-└── requirements.txt
+Directory structure:
+└── hoduclinh-accommodation-search-system-be/
+    ├── README.md
+    └── accommodation_system/
+        ├── manage.py
+        ├── requirements.txt
+        ├── accommodation_app/
+        │   ├── __init__.py
+        │   ├── admin.py
+        │   ├── apps.py
+        │   ├── models.py
+        │   ├── serializers.py
+        │   ├── tests.py
+        │   ├── urls.py
+        │   ├── utils.py
+        │   ├── views.py
+        │   ├── migrations/
+        │   │   ├── 0001_initial.py
+        │   │   ├── 0002_alter_user_password.py
+        │   │   ├── 0003_alter_user_password.py
+        │   │   ├── 0004_post_is_approved.py
+        │   │   ├── 0005_alter_commentpost_post_alter_commentpost_user.py
+        │   │   └── __init__.py
+        │   └── templates/
+        │       ├── index.html
+        │       └── admin/
+        │           └── accommodation_stats.html
+        └── accommodation_system/
+            ├── __init__.py
+            ├── asgi.py
+            ├── settings.py
+            ├── urls.py
+            └── wsgi.py
 ```
-
 **Frontend**
 ```
-AccommodationSearch-FE/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── redux/
-│   ├── App.js
-│   ├── index.js
-│   └── ...
-├── public/
-├── package.json
-└── README.md
+Directory structure:
+└── thien0709-accommodation_search_system_fe/
+    ├── README.md
+    ├── LICENSE
+    └── Accommodation_Search_System/
+        ├── App.js
+        ├── app.json
+        ├── babel.config.js
+        ├── index.js
+        ├── package.json
+        ├── components/
+        │   ├── Explore/
+        │   │   ├── Accommodation.js
+        │   │   └── PagerViewComponent.js
+        │   └── Home/
+        │       ├── HomeStyles.js
+        │       ├── Post.js
+        │       ├── Search.js
+        │       └── ToggleTheme.js
+        ├── configs/
+        │   ├── APIs.js
+        │   ├── Firebase.js
+        │   ├── MyUserContext.js
+        │   └── MyUserReducers.js
+        ├── navigation/
+        │   ├── Stack.js
+        │   └── Tab.js
+        ├── screens/
+        │   ├── AccommodationDetail.js
+        │   ├── ChatDetailScreen.js
+        │   ├── ChatScreen.js
+        │   ├── CheckoutScreen.js
+        │   ├── CommentScreen.js
+        │   ├── CreateAccommodation.js
+        │   ├── CreatePost.js
+        │   ├── ExploreScreen.js
+        │   ├── HomeScreen.js
+        │   ├── LoginScreen.js
+        │   ├── MyPostScreen.js
+        │   ├── PersonalDetailsScreen.js
+        │   ├── ProfileScreen.js
+        │   ├── RegisterScreen.js
+        │   └── WelcomeScreen.js
+        └── styles/
+            └── MyStyles.js
 ```
-
----
-
-## 📡 Danh Sách API Backend (Một phần)
-
-| Phương Thức | Endpoint                           | Mô Tả                              |
-| ----------- | ---------------------------------- | ----------------------------------- |
-| GET         | /api/accommodations/               | Lấy danh sách tất cả chỗ ở         |
-| POST        | /api/accommodations/               | Thêm một chỗ ở mới                 |
-| GET         | /api/accommodations/<id>/          | Xem chi tiết một chỗ ở             |
-| PUT         | /api/accommodations/<id>/          | Cập nhật thông tin chỗ ở           |
-| DELETE      | /api/accommodations/<id>/          | Xóa một chỗ ở                      |
-| POST        | /api/users/register/               | Đăng ký người dùng mới              |
-| GET         | /o/authorize/                      | Yêu cầu xác thực OAuth2            |
-| POST        | /o/token/                          | Lấy access token OAuth2            |
